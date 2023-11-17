@@ -1,2 +1,2 @@
-export * from './components/Button';
+export { Button } from './components/Button';
 //# sourceMappingURL=index.js.map
