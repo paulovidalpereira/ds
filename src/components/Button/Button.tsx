@@ -1,9 +1,7 @@
 import React from 'react'
 
 const Button = () => {
-    return (
-        <button>teste</button>
-    )
+  return <button>teste</button>
 }
 
 export default Button
