@@ -2,16 +2,33 @@
   "name": "paulo-react-ds",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
   },
-  "keywords": [],
+  "keywords": [
+    "react"
+  ],
   "author": "paulovidalpereira",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/react": "^18.2.37",
     "react": "^18.2.0",
     "typescript": "^5.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulovidalpereira/ds.git"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
 }
