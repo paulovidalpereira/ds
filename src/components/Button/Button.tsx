@@ -4,4 +4,4 @@ const Button = () => {
   return <button>teste</button>
 }
 
-export default Button
+export { Button }
